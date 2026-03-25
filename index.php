@@ -11,5 +11,9 @@ rename ("test.txt", "mir.txt") or die ("Ошибка переименовани�
 mkdir("/var/www/struk.ru/folder", 0700);
 rename ("mir.txt", "folder/mir.txt") or die ("Ошибка переименования файла");
 
+if (copy("/var/www/struk.ru/folder/mir.txt", "/var/www/struk.ru/folder/world.txt"))
+    echo "Копия файла создана";
+else echo "Ошибка копирования файла";
+
 fclose ($file);
 ?>
