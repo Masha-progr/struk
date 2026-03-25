@@ -12,8 +12,13 @@ mkdir("/var/www/struk.ru/folder", 0700);
 rename ("mir.txt", "folder/mir.txt") or die ("Ошибка переименования файла");
 
 if (copy("/var/www/struk.ru/folder/mir.txt", "/var/www/struk.ru/folder/world.txt"))
-    echo "Копия файла создана";
+    echo "Копия файла создана <br>";
 else echo "Ошибка копирования файла";
+
+$file = filesize("folder/world.txt");
+echo $file . " байт" . "<br>";
+echo $file/1024/1024 . " мегабайт" . "<br>";
+echo $file/1024/1024/1024 . " гигабайт" . "<br>";
 
 fclose ($file);
 ?>
