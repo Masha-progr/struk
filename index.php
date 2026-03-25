@@ -20,5 +20,10 @@ echo $file . " байт" . "<br>";
 echo $file/1024/1024 . " мегабайт" . "<br>";
 echo $file/1024/1024/1024 . " гигабайт" . "<br>";
 
+if (unlink("folder/world.txt"))
+    echo "Файл удален <br>";
+else echo "Ошибка при удалении файла";
+
+
 fclose ($file);
 ?>
