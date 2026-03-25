@@ -2,6 +2,7 @@
 $file = fopen("test.txt", 'w') or die("не удалось открыть файл");
 $str = "Привет мир!";
 fputs($file, $str);
+fclose ($file);
 
 $text = htmlentities(file_get_contents("test.txt"));
 echo $text . "<br/>";
@@ -44,7 +45,7 @@ else {
 
 mkdir("/var/www/struk.ru/test", 0700);
 
-rename("test", "www") or die("Ошибка переименования папки");
+rename("test", "www");
 
-fclose ($file);
+rmdir("www");
 ?>
