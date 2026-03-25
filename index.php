@@ -40,5 +40,9 @@ else {
     echo "Файлы не существуют";
 }
 
+//Часть 2
+
+mkdir("/var/www/struk.ru/test", 0700) or die ("Ошибка при создании папки");
+
 fclose ($file);
 ?>
