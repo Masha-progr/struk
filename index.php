@@ -8,5 +8,8 @@ echo $text . "<br/>";
 
 rename ("test.txt", "mir.txt") or die ("Ошибка переименования файла");
 
+mkdir("/var/www/struk.ru/folder", 0700);
+rename ("mir.txt", "folder/mir.txt") or die ("Ошибка переименования файла");
+
 fclose ($file);
 ?>
