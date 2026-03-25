@@ -57,4 +57,14 @@ foreach ($folders as $folder) {
     mkdir("test/" . $folder, 0777);
     echo "Создана: test/$folder<br>";
 }
+
+$files = glob("*.jpg");
+
+if (count($files) > 0) {
+    echo "<h2>Найденные изображения:</h2>";
+    foreach ($files as $file) 
+            echo "<img src=\"$file\" width=\"200\"> <a>$file</a> <br>";
+} else {
+    echo "Файлы с расширением .jpg не найдены.";
+}
 ?>
