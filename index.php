@@ -6,5 +6,7 @@ fputs($file, $str);
 $text = htmlentities(file_get_contents("test.txt"));
 echo $text . "<br/>";
 
+rename ("test.txt", "mir.txt") or die ("Ошибка переименования файла");
+
 fclose ($file);
 ?>
