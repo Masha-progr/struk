@@ -24,6 +24,21 @@ if (unlink("folder/world.txt"))
     echo "Файл удален <br>";
 else echo "Ошибка при удалении файла";
 
+$file1 = 'folder/world.txt';
+$file2 = 'folder/mir.txt';
+
+if (file_exists($file1) && file_exists($file2)) {
+    echo "Файлы существуют";
+} 
+elseif (file_exists($file1)) {
+    echo "Существует только файл $file1";
+} 
+elseif (file_exists($file2)) {
+    echo "Существует только файл $file2";
+} 
+else {
+    echo "Файлы не существуют";
+}
 
 fclose ($file);
 ?>
