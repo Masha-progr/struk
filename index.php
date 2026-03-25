@@ -48,4 +48,13 @@ mkdir("/var/www/struk.ru/test", 0700);
 rename("test", "www");
 
 rmdir("www");
+
+$folders = ["styles","images", "docs"];
+
+mkdir("/var/www/struk.ru/test", 0777);
+
+foreach ($folders as $folder) {
+    mkdir("test/" . $folder, 0777);
+    echo "Создана: test/$folder<br>";
+}
 ?>
