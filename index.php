@@ -28,21 +28,23 @@ $file1 = 'folder/world.txt';
 $file2 = 'folder/mir.txt';
 
 if (file_exists($file1) && file_exists($file2)) {
-    echo "Файлы существуют";
+    echo "Файлы существуют <br>";
 } 
 elseif (file_exists($file1)) {
-    echo "Существует только файл $file1";
+    echo "Существует только файл $file1 <br>";
 } 
 elseif (file_exists($file2)) {
-    echo "Существует только файл $file2";
+    echo "Существует только файл $file2 <br>";
 } 
 else {
-    echo "Файлы не существуют";
+    echo "Файлы не существуют <br>";
 }
 
 //Часть 2
 
-mkdir("/var/www/struk.ru/test", 0700) or die ("Ошибка при создании папки");
+mkdir("/var/www/struk.ru/test", 0700);
+
+rename("test", "www") or die("Ошибка переименования папки");
 
 fclose ($file);
 ?>
