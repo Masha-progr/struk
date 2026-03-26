@@ -93,42 +93,45 @@
 
 //$birthdayNumber = date('N', strtotime('2007-11-28'));
 //echo date('d.m.Y', strtotime('2007-11-28')) . " была: " . $week[$birthdayNumber];
+
+//<!DOCTYPE html>
+//<html lang="ru">
+//<head>
+//    <meta charset="UTF-8">
+//    <title>Сравнение дат</title>
+//</head>
+//<body>
+//<form method="POST">
+//    Первая дата (ГГГГ-ММ-ДД): <input type="text" name="date1" required><br><br>
+//    Вторая дата (ГГГГ-ММ-ДД): <input type="text" name="date2" required><br><br>
+//    <input type="submit" value="Сравнить">
+//</form>
+
+//<?php
+//if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+//    $date1 = $_POST['date1'];
+//    $date2 = $_POST['date2'];
+
+//    if (!empty($date1) && !empty($date2)) 
+//    {
+//        if ($date1 > $date2) {
+//            echo "Большая дата: " . $date1;
+//        } 
+//        elseif ($date1 < $date2) {
+//            echo "Большая дата: " . $date2;
+//        } 
+//        else {
+//            echo "Даты равны";
+//        }
+//    } 
+//    else {
+//        echo "Введите обе даты!";
+//    }
+//}
+//Закрывающий тег php
+//</body>
+//</html>
+
+$date = '1983-06-25';
+echo date('d-m-Y', strtotime($date));
 ?>
-
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>Сравнение дат</title>
-</head>
-<body>
-<form method="POST">
-    Первая дата (ГГГГ-ММ-ДД): <input type="text" name="date1" required><br><br>
-    Вторая дата (ГГГГ-ММ-ДД): <input type="text" name="date2" required><br><br>
-    <input type="submit" value="Сравнить">
-</form>
-
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $date1 = $_POST['date1'];
-    $date2 = $_POST['date2'];
-
-    if (!empty($date1) && !empty($date2)) 
-    {
-        if ($date1 > $date2) {
-            echo "Большая дата: " . $date1;
-        } 
-        elseif ($date1 < $date2) {
-            echo "Большая дата: " . $date2;
-        } 
-        else {
-            echo "Даты равны";
-        }
-    } 
-    else {
-        echo "Введите обе даты!";
-    }
-}
-?>
-</body>
-</html>
