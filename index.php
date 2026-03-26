@@ -41,24 +41,28 @@
 //    fclose($filOp);
 //}
 
-$countries = ['Spain' => 'Madrid', 'Russia' => 'Moscow'];
+//$countries = ['Spain' => 'Madrid', 'Russia' => 'Moscow'];
 
-function check_arr($arr, $key) 
-{
-    if (!array_key_exists($key, $arr)) 
-    {
-        throw new Exception("Данный элемент не существует в массиве");
-    }
-    return $arr[$key];
-}
-try 
-{
-    $res = check_arr($countries, 'Germany');
-    echo "Столица Германии: $res <br>";   
-} 
-catch (Exception $e) {
-    echo $e->getMessage() . "<br>";
-    echo "Файл: " . $e->getFile() . "<br>";
-    echo "Строка: " . $e->getLine() . "<br>";
-}
+//function check_arr($arr, $key) 
+//{
+//    if (!array_key_exists($key, $arr)) 
+//    {
+//        throw new Exception("Данный элемент не существует в массиве");
+//    }
+//    return $arr[$key];
+//}
+//try 
+//{
+//    $res = check_arr($countries, 'Germany');
+//    echo "Столица Германии: $res <br>";   
+//} 
+//catch (Exception $e) {
+//    echo $e->getMessage() . "<br>";
+//    echo "Файл: " . $e->getFile() . "<br>";
+//    echo "Строка: " . $e->getLine() . "<br>";
+//}
+
+//Часть 2
+
+echo mktime(10, 25, 0, 3, 15, 2025);
 ?>
