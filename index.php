@@ -20,22 +20,45 @@
 //    echo "Файл: " . $e->getFile() . "<br>";
 //    echo "Строка: " . $e->getLine();
 //}
-function safe_div($num, $div) {
-    if ($div == 0) {
-        throw new DivisionByZeroError("Делить на ноль нельзя!");
-    }
-    return $num / $div;
-}
 
-try {
-    $result = safe_div(17, 0);
-    echo "$result <br>";
+//function safe_div($num, $div) {
+//    if ($div == 0) {
+//        throw new DivisionByZeroError("Делить на ноль нельзя!");
+//    }
+//    return $num / $div;
+//}
+//try 
+//{
+//    $result = safe_div(17, 0);
+//    echo "$result <br>";
+//} 
+//catch (DivisionByZeroError $e) 
+//{
+//    $errMesg = $e->getMessage();
+//    echo $errMesg . "<br>";
+//    $filOp = fopen("log.txt", "a");
+//    fputs($filOp, $errMesg . "<br>");
+//    fclose($filOp);
+//}
+
+$countries = ['Spain' => 'Madrid', 'Russia' => 'Moscow'];
+
+function check_arr($arr, $key) 
+{
+    if (!array_key_exists($key, $arr)) 
+    {
+        throw new Exception("Данный элемент не существует в массиве");
+    }
+    return $arr[$key];
+}
+try 
+{
+    $res = check_arr($countries, 'Germany');
+    echo "Столица Германии: $res <br>";   
 } 
-catch (DivisionByZeroError $e) {
-    $errMesg = $e->getMessage();
-    echo $errMesg . "<br>";
-    $filOp = fopen("log.txt", "a");
-    fputs($filOp, $errMesg . "<br>");
-    fclose($filOp);
+catch (Exception $e) {
+    echo $e->getMessage() . "<br>";
+    echo "Файл: " . $e->getFile() . "<br>";
+    echo "Строка: " . $e->getLine() . "<br>";
 }
 ?>
