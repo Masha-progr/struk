@@ -66,5 +66,7 @@
 
 //echo mktime(10, 25, 0, 3, 15, 2025);
 
-echo time() - mktime(10, 25, 0, 3, 15, 2025);
+//echo time() - mktime(10, 25, 0, 3, 15, 2025);
+
+echo date('Y.m.d H:i:s');
 ?>
