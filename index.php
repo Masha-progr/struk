@@ -142,18 +142,18 @@
 //echo date('Y.m.d', strtotime('+1 year', $timestamp)) . "<br>";
 //echo date('Y.m.d', strtotime('-3 days', $timestamp));
 
-$today = strtotime(date('Y-m-d'));
-$newYear = strtotime(date('Y') . '-12-31');
+//$today = strtotime(date('Y-m-d'));
+//$newYear = strtotime(date('Y') . '-12-31');
 
-if ($today <= $newYear) 
-{
-    $days = ($newYear - $today) / (60 * 60 * 24);
-} 
-else 
-{
-    $nextNewYear = strtotime((date('Y') + 1) . '-12-31');
-    $days = ($nextNewYear - $today) / (60 * 60 * 24);
-}
+//if ($today <= $newYear) 
+//{
+//    $days = ($newYear - $today) / (60 * 60 * 24);
+//} 
+//else 
+//{
+//    $nextNewYear = strtotime((date('Y') + 1) . '-12-31');
+//    $days = ($nextNewYear - $today) / (60 * 60 * 24);
+//}
 
-echo "До Нового Года осталось: " . ceil($days) . " дней";
+//echo "До Нового Года осталось: " . ceil($days) . " дней";
 ?>
