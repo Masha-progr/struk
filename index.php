@@ -132,6 +132,13 @@
 //</body>
 //</html>
 
-$date = '1983-06-25';
-echo date('d-m-Y', strtotime($date));
+//$date = '1983-06-25';
+//echo date('d-m-Y', strtotime($date));
+
+$timestamp = strtotime('2000-02-03');
+
+echo date('Y.m.d', strtotime('+2 days', $timestamp)) . "<br>";
+echo date('Y.m.d', strtotime('+1 month +3 days', $timestamp)) . "<br>";
+echo date('Y.m.d', strtotime('+1 year', $timestamp)) . "<br>";
+echo date('Y.m.d', strtotime('-3 days', $timestamp));
 ?>
