@@ -68,5 +68,8 @@
 
 //echo time() - mktime(10, 25, 0, 3, 15, 2025);
 
-echo date('Y.m.d H:i:s');
+//echo date('Y.m.d H:i:s');
+
+$date = mktime(0, 0, 0, 9, 1, date('Y'));
+echo date('Y.m.d', $date);
 ?>
