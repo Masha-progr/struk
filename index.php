@@ -73,6 +73,24 @@
 //$date = mktime(0, 0, 0, 9, 1, date('Y'));
 //echo date('Y.m.d', $date);
 
-$timestamp = mktime(0, 0, 0, 2, 2, 2000);
-echo date('l', $timestamp);
+//$timestamp = mktime(0, 0, 0, 2, 2, 2000);
+//echo date('l', $timestamp);
+
+$week = [
+    1 => 'понедельник',
+    2 => 'вторник',
+    3 => 'среда',
+    4 => 'четверг',
+    5 => 'пятница',
+    6 => 'суббота',
+    7 => 'воскресенье'
+];
+
+echo "Сегодня: " . $week[date('N')] . "<br>";
+
+$dayNumber = date('N', strtotime('2016-06-12'));
+echo "12.06.2016 было: " . $week[$dayNumber] . "<br>";
+
+$birthdayNumber = date('N', strtotime('2007-11-28'));
+echo date('d.m.Y', strtotime('2007-11-28')) . " была: " . $week[$birthdayNumber];
 ?>
