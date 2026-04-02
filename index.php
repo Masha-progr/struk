@@ -22,10 +22,20 @@ public function getAge() {
 public function getSalary() {
         return $this->salary;
     }
+
+public function getTotalSalary($emps) {
+$total = 0;
+foreach ($emps as $emp) {
+    $total += $emp->getSalary();
+}
+return $total;
+}
 }
 
 $emp1 = new Employee("Иван", 30, 50000);
 $emp2 = new Employee("Мария", 25, 60000);
+
+$emps = [$emp1, $emp2];
 
 echo "{$emp1->name}, возраст: {$emp1->age}, зарплата: {$emp1->salary}<br>";
 echo "{$emp2->name}, возраст: {$emp2->age}, зарплата: {$emp2->salary}<br>";
@@ -41,4 +51,6 @@ echo "Возраст второго работника: " . $emp2->getAge() . "<
 
 echo "Зарплата первого работника: " . $emp1->getSalary() . "<br>";
 echo "Зарплата второго работника: " . $emp2->getSalary() . "<br>";
+
+echo "Общая зарплата сотрудников: " . $emp1->getTotalSalary($emps) . "<br>";
 ?>
