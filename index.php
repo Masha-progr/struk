@@ -14,6 +14,10 @@ $this->salary = $salary;
 public function getName() {
         return $this->name;
     }
+
+public function getAge() {
+        return $this->age;
+    }
 }
 
 $emp1 = new Employee("Иван", 30, 50000);
@@ -27,4 +31,7 @@ echo "Сумма возрастов: " . $emp1->age + $emp2->age . "<br>";
 
 echo "Имя первого работника: " . $emp1->getName() . "<br>";
 echo "Имя второго работника: " . $emp2->getName() . "<br>";
+
+echo "Возраст первого работника: " . $emp1->getAge() . "<br>";
+echo "Возраст второго работника: " . $emp2->getAge() . "<br>";
 ?>
