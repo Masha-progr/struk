@@ -24,7 +24,14 @@ public function getSalary() {
     }
 
 public function setAge($newAge) {
+        if ($newAge >= 18) {
             $this->age = $newAge;
+            return true;
+        } 
+   	else {
+            echo "Вам работать в нашей компании еще рано<br>";
+            return false;
+        }
     }
 
 public function getTotalSalary($emps) {
@@ -39,7 +46,7 @@ return $total;
 $emp1 = new Employee("Иван", 30, 50000);
 $emp2 = new Employee("Мария", 25, 60000);
 
-$emp1->setAge(40);
+$emp1->setAge(12);
 $emp2->setAge(80);
 
 $emps = [$emp1, $emp2];
