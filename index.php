@@ -24,7 +24,7 @@ public function getSalary() {
     }
 
 public function setAge($newAge) {
-        if ($newAge >= 18) {
+        if ($this->checkAge($newAge)) {
             $this->age = $newAge;
             return true;
         } 
@@ -42,8 +42,8 @@ foreach ($emps as $emp) {
 return $total;
 }
 
-public function checkAge() {
-if ($this->age >= 18) {
+private function checkAge($newAge) {
+if ($newAge >= 18) {
     return true;
 } else {
     return false;
@@ -77,5 +77,6 @@ echo "Зарплата второго работника: " . $emp2->getSalary()
 
 echo "Общая зарплата сотрудников: " . $emp1->getTotalSalary($emps) . "<br>";
 
-echo "Результат проверки возраста 2 сотрудника: " . $emp2->checkAge() . "<br>";
+$emp2->setAge(18);
+echo "Результат проверки возраста сотрудника: " . $emp2->getAge() . "<br>";
 ?>
